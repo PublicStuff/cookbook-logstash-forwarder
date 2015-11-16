@@ -2,9 +2,8 @@
   "network": {
     "servers": <%= @servers.to_json %>,
 <% if node['logstash-forwarder']['enable_ssl'] %>
-    "ssl certificate": "<%= node['logstash-forwarder']['ssl_cert'] %>",
-  <% if node['logstash-forwarder']['ssl_key'] != '' %>
-    "ssl key": "<%= node['logstash-forwarder']['ssl_key'] %>",
+    "ssl certificate": "",
+      "ssl key": "",
   <% end %>
 <% end %>
     "ssl ca": "<%= node['logstash-forwarder']['ssl_ca'] %>",
