@@ -37,7 +37,7 @@ ruby_block 'get log_forward resources' do
 end
 
 if node['logstash-forwarder']['enable_ssl']
-  Chef::Application.fatal!("Recipe logstash-forwarder::default can not use 'enable_ssl' with without providing ssl_cert") if node['logstash-forwarder']['ssl_cert'] == ''
+  #Chef::Application.fatal!("Recipe logstash-forwarder::default can not use 'enable_ssl' with without providing ssl_cert") if node['logstash-forwarder']['ssl_cert'] == ''
 end
 
 template node['logstash-forwarder']['config_path'] do
